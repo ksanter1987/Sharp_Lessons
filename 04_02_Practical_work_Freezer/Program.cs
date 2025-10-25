@@ -1,7 +1,5 @@
 ﻿namespace _04_02_Practical_work_Freezer
 {
-
-
     public class Freezer
     {
         private string brand;
@@ -9,7 +7,6 @@
         private int capacityLiters;
         private int temperature;
         private bool isDefrosting;
-
         private static int minAllowedTemperature = -25;
         private static double defaultPowerUsageKwh = 1.5;
 
@@ -100,15 +97,12 @@
         }
     }
 
-
-
     internal class Program
     {
         static void Main(string[] args)
         {
             Freezer myFreezer = new Freezer("Samsung", "RZ32", 315);
             myFreezer.Print();
-
             myFreezer.SetTemperature(-30);
             myFreezer.SetTemperature(-15);
             myFreezer.Print();
