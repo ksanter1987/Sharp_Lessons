@@ -94,6 +94,7 @@
             Console.WriteLine($"Minimum allowed temoerature: {minAllowedTemperature} C");
             Console.WriteLine($"Standert power usage: {defaultPowerUsageKwh} kW/h");
             Console.WriteLine("==============================================");
+            Console.WriteLine();
         }
     }
 
