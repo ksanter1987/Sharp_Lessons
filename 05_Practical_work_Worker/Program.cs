@@ -55,7 +55,7 @@ namespace _05_Practical_work_Worker
             {
                 if (value > DateTime.Now)
                 {
-                    throw new ArgumentException(nameof(value), "Дата прийняття на роботу не може бути в майбутньому.");
+                    throw new ArgumentOutOfRangeException(nameof(value), "Дата прийняття на роботу не може бути в майбутньому.");
                 }
                 _hireDate = value;
             }
