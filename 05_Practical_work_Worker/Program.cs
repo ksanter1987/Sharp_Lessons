@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 namespace _05_Practical_work_Worker
 {
     public class Worker
@@ -144,8 +145,11 @@ namespace _05_Practical_work_Worker
                     }
                 }
             }
+
+            var sortedWorkers = workers.OrderBy(w => w.FullName).ToArray();
+
             Console.WriteLine("\n--- Перелік працівників ---");
-            foreach (var worker in workers)
+            foreach (var worker in sortedWorkers)
             {
                 Console.WriteLine(worker.ToString());
             }
@@ -175,7 +179,7 @@ namespace _05_Practical_work_Worker
 
             Console.WriteLine($"\n--- Працівники зі стажем більше {minExperience} років ---");
             bool found = false;
-            foreach (var worker in workers)
+            foreach (var worker in sortedWorkers)
             {
                 if (worker.ExperienceYears > minExperience)
                 {
