@@ -1,5 +1,5 @@
-﻿using System.Globalization;
-using System.Text;
+﻿using System;
+using System.Globalization;
 namespace _05_Practical_work_Worker
 {
     public class Worker
@@ -95,8 +95,8 @@ namespace _05_Practical_work_Worker
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.UTF8;
-            Console.InputEncoding = Encoding.UTF8;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.UTF8;
             CultureInfo culture = new CultureInfo("uk-UA");
             System.Threading.Thread.CurrentThread.CurrentCulture = culture;
 
